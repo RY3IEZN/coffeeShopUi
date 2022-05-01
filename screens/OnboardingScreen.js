@@ -12,7 +12,7 @@ import {
 
 const { width, height } = Dimensions.get("screen");
 
-function OnboardingScreen(props) {
+function OnboardingScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Image
@@ -47,6 +47,7 @@ function OnboardingScreen(props) {
           }}
         >
           <TouchableOpacity
+            onPress={() => navigation.navigate("RegisterScreen")}
             style={{
               width: 150,
               height: 50,
@@ -63,6 +64,9 @@ function OnboardingScreen(props) {
           </TouchableOpacity>
           <View style={{ width: 50 }}></View>
           <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("LoginScreen");
+            }}
             style={{
               width: 150,
               height: 50,

@@ -5,9 +5,10 @@ import { StyleSheet, Text, View } from "react-native";
 import OnboardingScreen from "./screens/OnboardingScreen";
 import SplashScreen from "./screens/SplashScreen";
 import LoginScreen from "./screens/LoginScreen";
+import Navigators from "./navigators/Navigators";
 
 export default function App() {
-  return <LoginScreen />;
+  return <Navigators />;
 }
 
 const styles = StyleSheet.create({

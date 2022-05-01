@@ -6,14 +6,17 @@ import {
   StyleSheet,
   Text,
   TextInput,
+  FlatList,
   TouchableOpacity,
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import menu from "../data/menu";
 
-function LoginScreen(props) {
+function LoginScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <View
+      <TouchableOpacity
+        onPress={() => navigation.goBack()}
         style={{
           marginTop: 70,
           marginHorizontal: 30,
@@ -26,17 +29,18 @@ function LoginScreen(props) {
           size={24}
           color="black"
         />
-        <Text
-          style={{
-            color: "#B98068",
-            marginLeft: 130,
-            fontWeight: "700",
-            fontSize: 25,
-          }}
-        >
-          Login
-        </Text>
-      </View>
+      </TouchableOpacity>
+
+      <Text
+        style={{
+          color: "#B98068",
+          fontWeight: "700",
+          fontSize: 25,
+          textAlign: "center",
+        }}
+      >
+        Login
+      </Text>
       <View
         style={{
           marginTop: 40,
@@ -111,6 +115,7 @@ function LoginScreen(props) {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
+          onPress={() => navigation.navigate("MenuList")}
           style={{
             width: 370,
             height: 50,
@@ -126,9 +131,17 @@ function LoginScreen(props) {
           </Text>
         </TouchableOpacity>
         <View style={{ justifyContent: "center", alignItems: "center" }}>
-          <Text>
-            Dont have an account?
+          <Text
+            style={{
+              fontWeight: "400",
+              fontSize: 15,
+              color: "black",
+              margin: 5,
+            }}
+          >
+            Dont have an account?{" "}
             <Text
+              onPress={() => navigation.navigate("RegisterScreen")}
               style={{
                 fontWeight: "700",
                 fontSize: 15,

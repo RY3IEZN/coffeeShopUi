@@ -1,21 +1,17 @@
 /** @format */
 
 import React from "react";
-import {
-  View,
-  StyleSheet,
-  Button,
-  TouchableOpacity,
-  Text,
-  Image,
-} from "react-native";
+import { View, StyleSheet, TouchableOpacity, Text, Image } from "react-native";
 
-function SplashScreen(props) {
+function SplashScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Image source={require("../assets/coffeteklogo.png")} />
 
       <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("OnboardingScreen");
+        }}
         style={{
           width: 250,
           height: 50,
