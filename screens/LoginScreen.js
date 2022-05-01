@@ -115,7 +115,7 @@ function LoginScreen({ navigation }) {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => navigation.navigate("MenuList")}
+          onPress={() => navigation.navigate("HomeScreen")}
           style={{
             width: 370,
             height: 50,

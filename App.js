@@ -6,6 +6,7 @@ import OnboardingScreen from "./screens/OnboardingScreen";
 import SplashScreen from "./screens/SplashScreen";
 import LoginScreen from "./screens/LoginScreen";
 import Navigators from "./navigators/Navigators";
+import HomeScreen from "./screens/HomeScreen";
 
 export default function App() {
   return <Navigators />;

@@ -165,15 +165,6 @@ function OrderDetails({ route, navigation }) {
             justifyContent: "center",
           }}
         >
-          <TouchableOpacity>
-            <Image
-              style={{
-                marginHorizontal: 20,
-              }}
-              source={require("../assets/cupsmall.png")}
-            />
-          </TouchableOpacity>
-
           <TouchableOpacity onPress={() => setSelected(!selected)}>
             <Image
               style={{
@@ -184,11 +175,11 @@ function OrderDetails({ route, navigation }) {
             />
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => setSelected(true)}>
+          <TouchableOpacity onPress={() => setSelected(!selected)}>
             <Image
               style={{
                 marginHorizontal: 20,
-                tintColor: selected === false ? "green" : "red",
+                tintColor: selected === true ? "red" : "green",
               }}
               source={require("../assets/cuplarge.png")}
             />
@@ -285,6 +276,7 @@ function OrderDetails({ route, navigation }) {
       </View>
 
       <TouchableOpacity
+        onPress={() => navigation.navigate("SuccessfulScreen")}
         style={{
           width: 370,
           height: 50,

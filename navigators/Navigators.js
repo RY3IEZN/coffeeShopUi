@@ -10,6 +10,8 @@ import LoginScreen from "../screens/LoginScreen";
 import MenuList from "../screens/MenuList";
 import OrderDetails from "../screens/OrderDetails";
 import RegisterScreen from "../screens/RegisterScreen";
+import HomeScreen from "../screens/HomeScreen";
+import SuccessfulScreen from "../screens/SuccessfulScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -49,8 +51,22 @@ function Navigators(props) {
           options={{
             headerShown: false,
           }}
+          name="HomeScreen"
+          component={HomeScreen}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
           name="MenuList"
           component={MenuList}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name="SuccessfulScreen"
+          component={SuccessfulScreen}
         />
         <Stack.Screen
           options={{
